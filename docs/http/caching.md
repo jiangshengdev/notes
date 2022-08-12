@@ -17,9 +17,13 @@
 
 > 只想将响应存储在私有缓存中，则必须指定`private`指令
 
-```
+```yaml
 Cache-Control: private
 ```
+
+::: warning
+由于 VitePress 所用 Shiki 暂不支持 HTTP 格式高亮，本文使用与之接近的 yaml 格式进行高亮显示
+:::
 
 ### 共享缓存
 
@@ -32,27 +36,27 @@ Cache-Control: private
 
 #### 代理缓存
 
-一些代理还实现了缓存以减少出网络的流量
+一些代理还实现了缓存以减少出网的流量
 
 HTTPS 客户端/服务器通信加密，代理缓存只能隧道响应而不能充当缓存
 
 #### 托管缓存
 
-由服务开发人员明确部署，示例包括反向代理、CDN
+由服务开发人员明确部署。示例包括反向代理、CDN
 
-> 指定以下内容以退出私有缓存或代理缓存，使用自己的策略仅在托管缓存中进行缓存
+> 指定以下内容以选择退出私有缓存或代理缓存，使用自己的策略仅在托管缓存中进行缓存
 
-```
+```yaml
 Cache-Control: no-store
 ```
 
 ## 启发式缓存
 
-尽可能多的缓存
+即使没有`Cache-Control`，如果满足某些条件，响应也会被存储和重用
 
-> 响应
+> 例如。响应最后一次更新在 1 年前
 
-```
+```yaml
 HTTP/1.1 200 OK
 Content-Type: text/html
 Content-Length: 1024
@@ -63,16 +67,18 @@ Last-Modified: Tue, 22 Feb 2021 22:22:22 GMT
 …
 ```
 
+客户端存储此响应并重用它一段时间。规范建议存储后大约 10%（在本例中为 0.1 年）的时间
+
 ## 基于年龄的新鲜和陈旧
 
-HTTP 响应有两种状态
+存储的 HTTP 响应有两种状态
 
 1. 新鲜 **fresh**
 2. 陈旧 **stale**
 
-> 示例响应
+> 示例响应（604800 秒是一周）
 
-```
+```yaml
 HTTP/1.1 200 OK
 Content-Type: text/html
 Content-Length: 1024
@@ -86,9 +92,9 @@ Cache-Control: max-age=604800
 - 如果响应的年龄*小于*一周，则响应是新鲜的
 - 如果响应的年龄*超过*一周，则响应是陈旧的
 
-> 共享缓存将响应存储一天，向后续客户端发送响应
+> 当响应存储在共享缓存中时，有必要通知客户端响应的年龄。如果共享缓存将响应存储了一天，则共享缓存将向后续客户端请求发送以下响应。
 
-```
+```yaml
 HTTP/1.1 200 OK
 Content-Type: text/html
 Content-Length: 1024
@@ -100,12 +106,16 @@ Age: 86400
 …
 ```
 
+在剩余的 518400 秒内是新鲜的，即响应`max-age`和`Age`的差值
+
 ## 过期或最大年龄
 
-HTTP/1.0，新鲜度过去由`Expires`标头指定
+在 HTTP/1.0 中，新鲜度过去由`Expires`标头指定
 
-```
+> `Expires`标头使用显式时间而不是经过的时间来指定缓存的生命周期
+
+```yaml
 Expires: Tue, 28 Feb 2022 22:22:22 GMT
 ```
 
-`Expires`和`Cache-Control: max-age`同时提供，`max-age`定义为首选
+如果`Expires`和`Cache-Control: max-age`同时提供，`max-age`定义为首选
