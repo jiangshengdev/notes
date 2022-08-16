@@ -6,59 +6,66 @@
 
 > Summary
 
-**URL** 代表统一资源定位器 (Uniform Resource Locator)。URL 只不过是
-Web 上给定的唯一资源地址。理论上，每个有效的 URL 都指向一个唯一资源
+**URL** 代表统一资源定位器 (Uniform Resource Locator)。
+URL 只不过是 Web 上给定的唯一资源地址。
+理论上，每个有效的 URL 都指向一个唯一资源
 
 ## 基础：URL 剖析
 
 > Basics: anatomy of a URL
 
-URL 由不同的部分组成，有些是强制性的，有些是可选的。下面的 URL 中高亮显示了最重要的部分
+URL 由不同的部分组成，有些是强制性的，有些是可选的。
+下面的 URL 中高亮显示了最重要的部分
 
-![url-all](mdn-url-all.svg)
+![url-all](url/mdn-url-all.svg)
 
 ## 方案
 
 > Scheme
 
-![url-protocol](mdn-url-protocol.svg)
+![url-protocol](url/mdn-url-protocol.svg)
 
-它表示浏览器请求资源必须使用的协议。通常对于网站，协议是 HTTPS 或 HTTP
+它表示浏览器请求资源必须使用的协议。
+通常对于网站，协议是 HTTPS 或 HTTP
 
 ## 权限
 
 > Authority
 
-![url-authority](mdn-url-authority.svg)
+![url-authority](url/mdn-url-authority.svg)
 
 权限包括域名和端口
 
 - 域名指示正在请求哪个 Web 服务器
-- 端口表示用于访问 Web 服务器上的资源的“入口”。标准端口（HTTP 为 80，HTTPS 为 443）通常省略
+- 端口表示用于访问 Web 服务器上的资源的“入口”。
+  标准端口（HTTP 为 80，HTTPS 为 443）通常省略
 
 ## 资源路径
 
 > Path to resource
 
-![url-path](mdn-url-path.svg)
+![url-path](url/mdn-url-path.svg)
 
-在 Web 的早期，这样的路径表示 Web 服务器上的物理文件位置。如今，它主要是由 Web 服务器处理的抽象路径
+在 Web 的早期，这样的路径表示 Web 服务器上的物理文件位置。
+如今，它主要是由 Web 服务器处理的抽象路径
 
 ## 参数
 
 > Parameters
 
-![url-parameters](mdn-url-parameters.svg)
+![url-parameters](url/mdn-url-parameters.svg)
 
-参数是用`&`分隔的键/值对列表。Web 服务器可以在返回资源之前使用这些参数来做额外的事情
+参数是用`&`分隔的键/值对列表。
+Web 服务器可以在返回资源之前使用这些参数来做额外的事情
 
 ## 锚点
 
 > Anchor
 
-![url-anchor](mdn-url-anchor.svg)
+![url-anchor](url/mdn-url-anchor.svg)
 
-代表资源内的一种“书签”，为浏览器提供了显示位于“书签”位置内容的指示。`#`之后的内容不会发送到服务器
+代表资源内的一种“书签”，为浏览器提供了显示位于“书签”位置内容的指示。
+`#`之后的内容不会发送到服务器
 
 ## 绝对 URL 与相对 URL
 
