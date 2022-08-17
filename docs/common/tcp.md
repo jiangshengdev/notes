@@ -17,3 +17,5 @@ HTTP 浏览器请求等数据之前协商连接的参数
 
 在创建安全连接时，此握手步骤发生在 DNS 查找(DNS lookup)之后和 TLS 握手(TLS handshake)之前。
 连接的每一侧都可以通过四次握手独立终止连接
+
+![url-all](tcp/tcp-segment-header.svg)
