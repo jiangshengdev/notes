@@ -34,10 +34,10 @@ HTTPS 或 HTTP
 
 ![url-authority](url/mdn-url-authority.svg)
 
-权限包括域名和端口
+> 权限包括域名和端口
 
 - 域名指示正在请求哪个 Web 服务器
-- 端口表示用于访问 Web 服务器上的资源的“入口”。标准端口（HTTP
+- 端口表示用于访问 Web 服务器上资源的「入口」。标准端口（HTTP
   为 80，HTTPS 为 443）通常省略
 
 ## 资源路径
@@ -56,7 +56,7 @@ Web 服务器处理的抽象路径
 
 ![url-parameters](url/mdn-url-parameters.svg)
 
-参数是用 `&` 分隔的键值对列表。Web
+参数是用 `&` 分隔的键/值对列表。Web
 服务器可以在返回资源之前使用这些参数来执行额外的操作
 
 ## 锚点
@@ -65,7 +65,7 @@ Web 服务器处理的抽象路径
 
 ![url-anchor](url/mdn-url-anchor.svg)
 
-代表资源内的一种“书签”，为浏览器提供了显示位于“书签”位置内容的指示。`#`
+代表资源内的一种「书签」，为浏览器提供了显示位于「书签」位置内容的指示。`#`
 之后的内容不会发送到服务器
 
 ## 绝对 URL 与相对 URL
@@ -81,15 +81,15 @@ URL，可以使用此信息来填充文档中 URL 的缺失部分
 
 > Examples of absolute URLs
 
-```
+```text
 https://developer.mozilla.org/en-US/docs/Learn
 ```
 
-```
+```text
 //developer.mozilla.org/en-US/docs/Learn
 ```
 
-```
+```text
 /en-US/docs/Learn
 ```
 
@@ -97,11 +97,11 @@ https://developer.mozilla.org/en-US/docs/Learn
 
 > Examples of relative URLs
 
-```
+```text
 Skills/Infrastructure/Understanding_URLs
 ```
 
-```
+```text
 ../CSS/display
 ```
 
