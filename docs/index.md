@@ -4,7 +4,7 @@
 
 [URL](common/url.md)
 
-[TCP 握手](common/tcp.md)
+[TCP](common/tcp.md)
 
 ## HTTP
 
