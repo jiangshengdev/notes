@@ -18,9 +18,9 @@ URL 由不同的部分组成，有些是必备的，有些则是可选的。下�
 URL 高亮显示了最重要的部分
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="url/mdn-url-all-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="url/mdn-url-all-light.svg">
-  <img alt="url-all" src="url/mdn-url-all-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="./url/mdn-url-all-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./url/mdn-url-all-light.svg">
+  <img alt="./url-all" src="./url/mdn-url-all-light.svg">
 </picture>
 
 ## 方案
@@ -28,9 +28,9 @@ URL 高亮显示了最重要的部分
 > Scheme
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="url/mdn-url-protocol-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="url/mdn-url-protocol-light.svg">
-  <img alt="url-protocol" src="url/mdn-url-protocol-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="./url/mdn-url-protocol-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./url/mdn-url-protocol-light.svg">
+  <img alt="./url-protocol" src="./url/mdn-url-protocol-light.svg">
 </picture>
 
 它表示浏览器请求资源必须使用的协议。通常对于网站，协议是
@@ -41,9 +41,9 @@ HTTPS 或 HTTP
 > Authority
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="url/mdn-url-authority-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="url/mdn-url-authority-light.svg">
-  <img alt="url-authority" src="url/mdn-url-authority-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="./url/mdn-url-authority-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./url/mdn-url-authority-light.svg">
+  <img alt="./url-authority" src="./url/mdn-url-authority-light.svg">
 </picture>
 
 > 权限包括域名和端口
@@ -57,9 +57,9 @@ HTTPS 或 HTTP
 > Path to resource
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="url/mdn-url-path-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="url/mdn-url-path-light.svg">
-  <img alt="url-path" src="url/mdn-url-path-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="./url/mdn-url-path-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./url/mdn-url-path-light.svg">
+  <img alt="./url-path" src="./url/mdn-url-path-light.svg">
 </picture>
 
 在 Web 的早期，这样的路径表示
@@ -71,9 +71,9 @@ Web 服务器处理的抽象路径
 > Parameters
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="url/mdn-url-parameters-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="url/mdn-url-parameters-light.svg">
-  <img alt="url-parameters" src="url/mdn-url-parameters-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="./url/mdn-url-parameters-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./url/mdn-url-parameters-light.svg">
+  <img alt="./url-parameters" src="./url/mdn-url-parameters-light.svg">
 </picture>
 
 参数是用 `&` 分隔的键/值对列表。Web
@@ -84,9 +84,9 @@ Web 服务器处理的抽象路径
 > Anchor
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="url/mdn-url-anchor-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="url/mdn-url-anchor-light.svg">
-  <img alt="url-anchor" src="url/mdn-url-anchor-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="./url/mdn-url-anchor-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./url/mdn-url-anchor-light.svg">
+  <img alt="./url-anchor" src="./url/mdn-url-anchor-light.svg">
 </picture>
 
 代表资源内的一种「书签」，为浏览器提供了显示位于「书签」位置内容的指示。`#`
