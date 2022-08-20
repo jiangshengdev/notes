@@ -83,17 +83,36 @@ ACK 确认另一端的初始序列号本身，不含数据
 
 > Window size (16 bits)
 
+接收窗口的大小，指定此段的发送方当前可以接收的单位窗口大小的数量
+
 ### 校验和
 
 > Checksum (16 bits)
+
+用于 TCP 标头、负载和 IP 伪标头的错误检查
 
 ### 紧急指针
 
 > Urgent pointer (16 bits)
 
+如果设置了 URG 标识，那么这表示最后一个紧急数据字节的序列号偏移量
+
 ### 选项
 
 > Options (Variable 0–320 bits, in units of 32 bits)
+
+该字段长度由数据偏移决定。选项最多有三个字段
+
+- 选项种类（1 字节）
+- 选项长度（1 字节）
+- 选项数据（可变）
+
+| Option-Kind | Option-Length | Option-Data | Purpose              |
+| ----------- | ------------- | ----------- | -------------------- |
+| 0           | -             | -           | End of options list  |
+| 1           | -             | -           | No operation         |
+| 2           | 4             | SS          | Maximum segment size |
+| 3           | 3             | S           | Window scale         |
 
 ## TCP 握手
 
