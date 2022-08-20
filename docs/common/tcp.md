@@ -12,7 +12,11 @@ OSI 模型中，它完成第四层传输层所指定的功能
 
 > TCP segment structure
 
-![url-all](tcp/tcp-segment-header.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="tcp/tcp-segment-header-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="tcp/tcp-segment-header-light.svg">
+  <img alt="tcp-segment-header" src="tcp/tcp-segment-header-light.svg">
+</picture>
 
 ### 源端口
 
