@@ -118,6 +118,12 @@ ACK 确认另一端的初始序列号本身，不含数据
 
 > TCP handshake
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./tcp/tcp-handshake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./tcp/tcp-handshake-light.svg">
+  <img alt="./tcp-handshake" src="./tcp/tcp-handshake-light.svg">
+</picture>
+
 TCP 使用**三次握手**（**three-way handshake**）在基于
 IP 的网络上建立 TCP/IP 连接
 
