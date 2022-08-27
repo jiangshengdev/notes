@@ -141,3 +141,13 @@ TCP 套接字连接
 在创建安全连接时，此握手步骤发生在 DNS 查找（DNS
 lookup）之后和 TLS 握手（TLS
 handshake）之前。连接的每一侧都可以通过四次握手独立终止连接
+
+## TCP 状态码
+
+> TCP socket states
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./tcp/tcp-state-diagram-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./tcp/tcp-state-diagram-light.svg">
+  <img alt="./tcp-state-diagram" src="./tcp/tcp-state-diagram-light.svg">
+</picture>
