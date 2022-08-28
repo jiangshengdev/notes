@@ -142,7 +142,7 @@ TCP 套接字连接
 lookup）之后和 TLS 握手（TLS
 handshake）之前。连接的每一侧都可以通过四次握手独立终止连接
 
-## TCP 状态码
+## TCP 套接字状态
 
 > TCP socket states
 
@@ -151,3 +151,47 @@ handshake）之前。连接的每一侧都可以通过四次握手独立终止�
   <source media="(prefers-color-scheme: light)" srcset="./tcp/tcp-state-diagram-light.svg">
   <img alt="./tcp-state-diagram" src="./tcp/tcp-state-diagram-light.svg">
 </picture>
+
+LISTEN
+: Server
+等待来自任何远程 TCP 端点的连接请求
+
+SYN-SENT
+: Client
+在发送连接请求后等待匹配的连接请求
+
+SYN-RECEIVED
+: Server
+在收到并发送连接请求后等待确认连接请求
+
+ESTABLISHED
+: Server and client
+打开连接，接收的数据可以传递给用户。连接数据传输阶段的正常状态
+
+FIN-WAIT-1
+: Server and client
+等待远程 TCP 的连接终止请求，或之前发送的连接终止请求的确认
+
+FIN-WAIT-2
+: Server and client
+等待远程 TCP 的连接终止请求
+
+CLOSE-WAIT
+: Server and client
+等待本地用户的连接终止请求
+
+CLOSING
+: Server and client
+等待远程 TCP 的连接终止请求确认
+
+LAST-ACK
+: Server and client
+等待之前发送到远程 TCP 的连接终止请求的确认（包括对其连接终止请求的确认）
+
+TIME-WAIT
+: Server or client
+等待足够的时间来确保连接上的所有剩余数据包都已过期
+
+CLOSED
+: Server and client
+完全没有连接状态
