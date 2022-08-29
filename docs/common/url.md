@@ -6,6 +6,11 @@
 
 > Summary
 
+HTTP 请求的目标称为「资源」，其性质没有进一步定义；它可以是文档、照片或其他任何东西。每个资源都由一个统一资源标识符（Uniform
+Resource Identifier，URI）标识，该标识符在整个 HTTP 中用于标识资源
+
+URI 最常见的形式是 URL，也就是众所周知的网址
+
 **URL** 代表统一资源定位器（Uniform Resource Locator）。URL
 只不过是 Web 上给定唯一资源的地址。理论上，每个有效的
 URL 都指向一个唯一资源
