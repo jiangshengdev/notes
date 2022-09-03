@@ -1,21 +1,27 @@
-# 什么是 URL？
+# 🔗 什么是 URL？
 
 > What is a URL?
 
-## 概述
+## 📰 概述
 
 > Summary
 
-HTTP 请求的目标称为「资源」，其性质没有进一步定义；它可以是文档、照片或其他任何东西。每个资源都由一个统一资源标识符（Uniform
-Resource Identifier，URI）标识，该标识符在整个 HTTP 中用于标识资源
+HTTP 请求的目标称为「资源」，其性质没有进一步定义；它可以是文档📄、照片🏞或其他任何东西。每个资源都由一个统一资源标识符（Uniform
+Resource Identifier）标识，该标识符在整个 HTTP 中用于标识资源
 
 URI 最常见的形式是 URL，也就是众所周知的网址
+
+```text
+https://developer.mozilla.org
+https://developer.mozilla.org/en-US/docs/Learn/
+https://developer.mozilla.org/en-US/search?q=URL
+```
 
 **URL** 代表统一资源定位器（Uniform Resource Locator）。URL
 只不过是 Web 上给定唯一资源的地址。理论上，每个有效的
 URL 都指向一个唯一资源
 
-## 基础：URL 剖析
+## 🔬 基础：URL 剖析
 
 > Basics: anatomy of a URL
 
@@ -28,7 +34,7 @@ URL 高亮显示了最重要的部分
   <img alt="./url-all" src="./url/mdn-url-all-light.svg">
 </picture>
 
-## 方案
+## 🖋 方案
 
 > Scheme
 
@@ -41,7 +47,7 @@ URL 高亮显示了最重要的部分
 它表示浏览器请求资源必须使用的协议。通常对于网站，协议是
 HTTPS 或 HTTP
 
-## 权限
+## 👑 权威
 
 > Authority
 
@@ -51,13 +57,13 @@ HTTPS 或 HTTP
   <img alt="./url-authority" src="./url/mdn-url-authority-light.svg">
 </picture>
 
-> 权限包括域名和端口
+> 权威包括域名和端口
 
 - 域名指示正在请求哪个 Web 服务器
 - 端口表示用于访问 Web 服务器上资源的「入口」。标准端口（HTTP
   为 80，HTTPS 为 443）通常省略
 
-## 资源路径
+## 🐾 资源路径
 
 > Path to resource
 
@@ -71,7 +77,7 @@ HTTPS 或 HTTP
 Web 服务器上的物理文件位置。如今，它主要是由
 Web 服务器处理的抽象路径
 
-## 参数
+## 🎛 参数
 
 > Parameters
 
@@ -84,7 +90,7 @@ Web 服务器处理的抽象路径
 参数是用 `&` 分隔的键/值对列表。Web
 服务器可以在返回资源之前使用这些参数来执行额外的操作
 
-## 锚点
+## ⚓️ 锚点
 
 > Anchor
 
@@ -94,8 +100,8 @@ Web 服务器处理的抽象路径
   <img alt="./url-anchor" src="./url/mdn-url-anchor-light.svg">
 </picture>
 
-代表资源内的一种「书签」，为浏览器提供了显示位于「书签」位置内容的指示。`#`
-之后的内容不会发送到服务器
+代表资源内的一种「书签🔖」，为浏览器提供了显示位于「书签」位置内容的指示。`#`
+之后的内容不会随请求发送到服务器
 
 ## 绝对 URL 与相对 URL
 
@@ -134,7 +140,7 @@ Skills/Infrastructure/Understanding_URLs
 ../CSS/display
 ```
 
-## 语义 URL
+## 💬 语义 URL
 
 > Semantic URLs
 
