@@ -6,7 +6,7 @@
 
 > Summary
 
-HTTP 请求的目标称为「资源」，其性质没有进一步定义；它可以是文档📄、照片🏞或其他任何东西。每个资源都由一个统一资源标识符（Uniform
+HTTP 请求的目标称为「资源 🪵」，其性质没有进一步定义；它可以是文档 📄、照片 🏞 或其他任何东西。每个资源都由一个统一资源标识符（Uniform
 Resource Identifier）标识，该标识符在整个 HTTP 中用于标识资源
 
 URI 最常见的形式是 URL，也就是众所周知的网址
@@ -17,7 +17,7 @@ https://developer.mozilla.org/en-US/docs/Learn/
 https://developer.mozilla.org/en-US/search?q=URL
 ```
 
-**URL** 代表统一资源定位器（Uniform Resource Locator）。URL
+**URL** 代表统一资源定位器 🧭（Uniform Resource Locator）。URL
 只不过是 Web 上给定唯一资源的地址。理论上，每个有效的
 URL 都指向一个唯一资源
 
@@ -100,10 +100,10 @@ Web 服务器处理的抽象路径
   <img alt="./url-anchor" src="./url/mdn-url-anchor-light.svg">
 </picture>
 
-代表资源内的一种「书签🔖」，为浏览器提供了显示位于「书签」位置内容的指示。`#`
+代表资源内的一种「书签 🔖」，为浏览器提供了显示位于「书签」位置内容的指示。`#`
 之后的内容不会随请求发送到服务器
 
-## 绝对 URL 与相对 URL
+## 🆚 绝对 URL 与相对 URL
 
 > Absolute URLs vs relative URLs
 

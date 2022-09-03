@@ -11,6 +11,8 @@
     "docs:serve": "vitepress serve docs"
   },
   "devDependencies": {
+    "@types/markdown-it": "^12.2.3",
+    "markdown-it-deflist": "^2.1.0",
     "prettier": "^2.7.1",
     "vitepress": "^1.0.0-alpha.13",
     "vue": "^3.2.38"

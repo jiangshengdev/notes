@@ -1,4 +1,4 @@
-# ✉️ TCP
+# 📨 TCP
 
 ## 📰 概述
 
@@ -66,18 +66,42 @@ ACK 确认另一端的初始序列号本身，不含数据
 
 包含 9 个 1 比特标识
 
-- NS（ECN-nonce）：隐藏保护
-- CWR（Congestion window reduced）：拥塞窗口减少
-- ECE（ECN-Echo）：具有双重作用
-  - 如果 SYN 被设置为（1），则 TCP 对等体支持 ECN
-  - 如果 SYN 被清空为（0），用作对 TCP 发送方网络拥塞的指示
-- URG（Urgent）：表示紧急指针字段有效
-- ACK（Acknowledgment）：表示确认号字段有效。客户端发送的初始 SYN
-  数据包之后的所有数据包都应设置此标识
-- PSH（Push）：推送功能。要求将缓冲数据推送到接收应用程序
-- RST（Reset）：重置连接
-- SYN（Synchronize）：同步序列号。只有从两端发送的第一个数据包才应该设置此标识。其它一些标识和字段根据此标识改变含义，一些仅在设置时有效，另一些在清空时有效
-- FIN：发送方的最后一个数据包
+NS（ECN-nonce）
+: 隐藏保护
+
+CWR（Congestion window reduced）
+: 拥塞窗口减少
+
+ECE（ECN-Echo）
+: 具有双重作用
+
+<dl>
+  <dd>
+    <ul>
+      <li>如果 SYN 被设置为（1），则 TCP 对等体支持 ECN</li>
+      <li>如果 SYN 被清空为（0），用作对 TCP 发送方网络拥塞的指示</li>
+    </ul>
+  </dd>
+</dl>
+
+URG（Urgent）
+: 表示紧急指针字段有效
+
+ACK（Acknowledgment）
+: 表示确认号字段有效。客户端发送的初始 SYN
+数据包之后的所有数据包都应设置此标识
+
+PSH（Push）
+: 推送功能。要求将缓冲数据推送到接收应用程序
+
+RST（Reset）
+: 重置连接
+
+SYN（Synchronize）
+: 同步序列号。只有从两端发送的第一个数据包才应该设置此标识。其它一些标识和字段根据此标识改变含义，一些仅在设置时有效，另一些在清空时有效
+
+FIN
+: 发送方的最后一个数据包
 
 ### 窗口大小
 
@@ -142,7 +166,7 @@ TCP 套接字连接
 lookup）之后和 TLS 握手（TLS
 handshake）之前。连接的每一侧都可以通过四次握手独立终止连接
 
-## TCP 套接字状态
+## 🧫 TCP 套接字状态
 
 > TCP socket states
 
@@ -152,46 +176,35 @@ handshake）之前。连接的每一侧都可以通过四次握手独立终止�
   <img alt="./tcp-state-diagram" src="./tcp/tcp-state-diagram-light.svg">
 </picture>
 
-LISTEN
-: Server
-等待来自任何远程 TCP 端点的连接请求
+LISTEN 📡（Server）
+: 等待来自任何远程 TCP 端点的连接请求
 
-SYN-SENT
-: Client
-在发送连接请求后等待匹配的连接请求
+SYN-SENT 📤（Client）
+: 在发送连接请求后等待匹配的连接请求
 
-SYN-RECEIVED
-: Server
-在收到并发送连接请求后等待确认连接请求
+SYN-RECEIVED 📥（Server）
+: 在收到并发送连接请求后等待确认连接请求
 
-ESTABLISHED
-: Server and client
-打开连接，接收的数据可以传递给用户。连接数据传输阶段的正常状态
+ESTABLISHED 📦（Server and client）
+: 打开连接，接收的数据可以传递给用户。连接数据传输阶段的正常状态
 
-FIN-WAIT-1
-: Server and client
-等待远程 TCP 的连接终止请求，或之前发送的连接终止请求的确认
+FIN-WAIT-1 ⏳（Server and client）
+: 等待远程 TCP 的连接终止请求，或之前发送的连接终止请求的确认
 
-FIN-WAIT-2
-: Server and client
-等待远程 TCP 的连接终止请求
+FIN-WAIT-2 ⌛️（Server and client）
+: 等待远程 TCP 的连接终止请求
 
-CLOSE-WAIT
-: Server and client
-等待本地用户的连接终止请求
+CLOSE-WAIT（Server and client）
+: 等待本地用户的连接终止请求
 
-CLOSING
-: Server and client
-等待远程 TCP 的连接终止请求确认
+CLOSING（Server and client）
+: 等待远程 TCP 的连接终止请求确认
 
-LAST-ACK
-: Server and client
-等待之前发送到远程 TCP 的连接终止请求的确认（包括对其连接终止请求的确认）
+LAST-ACK（Server and client）
+: 等待之前发送到远程 TCP 的连接终止请求的确认（包括对其连接终止请求的确认）
 
-TIME-WAIT
-: Server or client
-等待足够的时间来确保连接上的所有剩余数据包都已过期
+TIME-WAIT ⏲（Server or client）
+: 等待足够的时间来确保连接上的所有剩余数据包都已过期
 
-CLOSED
-: Server and client
-完全没有连接状态
+CLOSED 🔌（Server and client）
+: 完全没有连接状态
