@@ -176,35 +176,82 @@ handshake）之前。连接的每一侧都可以通过四次握手独立终止�
   <img alt="./tcp-state-diagram" src="./tcp/tcp-state-diagram-light.svg">
 </picture>
 
-LISTEN 📡（Server）
-: 等待来自任何远程 TCP 端点的连接请求
+### 📡 LISTEN（Server）
 
-SYN-SENT 📤（Client）
-: 在发送连接请求后等待匹配的连接请求
+等待来自任何远程 TCP 端点的连接请求
 
-SYN-RECEIVED 📥（Server）
-: 在收到并发送连接请求后等待确认连接请求
+以 Rust 语言为例，使用标准库中的网络模块下的 `TcpListener` 创建一个 TCP 套接字服务器，并监听连接。代码参考文档
 
-ESTABLISHED 📦（Server and client）
-: 打开连接，接收的数据可以传递给用户。连接数据传输阶段的正常状态
+https://doc.rust-lang.org/std/net/struct.TcpListener.html#examples
 
-FIN-WAIT-1 ⏳（Server and client）
-: 等待远程 TCP 的连接终止请求，或之前发送的连接终止请求的确认
+```rust{8}
+use std::net::{TcpListener, TcpStream};
 
-FIN-WAIT-2 ⌛️（Server and client）
-: 等待远程 TCP 的连接终止请求
+fn handle_client(stream: TcpStream) {
+    println!("{:#?}", stream);
+}
 
-CLOSE-WAIT（Server and client）
-: 等待本地用户的连接终止请求
+fn main() -> std::io::Result<()> {
+    let listener = TcpListener::bind("127.0.0.1:8080")?;
 
-CLOSING（Server and client）
-: 等待远程 TCP 的连接终止请求确认
+    // accept connections and process them serially
+    for stream in listener.incoming() {
+        handle_client(stream?);
+    }
+    Ok(())
+}
+```
 
-LAST-ACK（Server and client）
-: 等待之前发送到远程 TCP 的连接终止请求的确认（包括对其连接终止请求的确认）
+运行后，使用网络工具 `netstat` 进行查看
 
-TIME-WAIT ⏲（Server or client）
-: 等待足够的时间来确保连接上的所有剩余数据包都已过期
+```shell
+netstat -a -n | head -n 2 && netstat -a -n | grep 8080
+```
 
-CLOSED 🔌（Server and client）
-: 完全没有连接状态
+即可发现其处于 `LISTEN` 状态
+
+```text{3}
+Active Internet connections (including servers)
+Proto Recv-Q Send-Q  Local Address          Foreign Address        (state)
+tcp4       0      0  127.0.0.1.8080         *.*                    LISTEN
+```
+
+### 📤 SYN-SENT（Client）
+
+在发送连接请求后等待匹配的连接请求
+
+### 📥 SYN-RECEIVED（Server）
+
+在收到并发送连接请求后等待确认连接请求
+
+### 📦 ESTABLISHED（Server and client）
+
+打开连接，接收的数据可以传递给用户。连接数据传输阶段的正常状态
+
+### ⏳ FIN-WAIT-1（Server and client）
+
+等待远程 TCP 的连接终止请求，或之前发送的连接终止请求的确认
+
+### ⌛️ FIN-WAIT-2（Server and client）
+
+等待远程 TCP 的连接终止请求
+
+### CLOSE-WAIT（Server and client）
+
+等待本地用户的连接终止请求
+
+### CLOSING（Server and client）
+
+等待远程 TCP 的连接终止请求确认
+
+### LAST-ACK（Server and client）
+
+等待之前发送到远程 TCP 的连接终止请求的确认（包括对其连接终止请求的确认）
+
+### ⏲ TIME-WAIT（Server or client）
+
+等待足够的时间来确保连接上的所有剩余数据包都已过期
+
+### 🔌 CLOSED（Server and client）
+
+完全没有连接状态
