@@ -178,3 +178,7 @@ TCP 连接可以使用 Connection 标头部分控制。HTTP/2
 ## 总结
 
 > Conclusion
+
+## 参考文档
+
+1. [An overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)

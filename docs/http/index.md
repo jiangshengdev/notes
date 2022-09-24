@@ -11,3 +11,7 @@
 
 [缓存](caching.md)
 : 缓存对于快速网站非常重要。本文介绍了不同的缓存方法，以及如何使用 HTTP 标头来控制它们
+
+## 参考文档
+
+1. [HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP)

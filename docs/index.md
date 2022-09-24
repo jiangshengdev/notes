@@ -11,3 +11,8 @@
 ## 📄 HTTP
 
 [HTTP 索引](http/index.md)
+
+## 参考文档
+
+1. [MDN Web Docs](https://developer.mozilla.org/en-US/)
+2. [Wikipedia](https://en.wikipedia.org/wiki/Main_Page)

@@ -255,3 +255,8 @@ tcp4       0      0  127.0.0.1.8080         *.*                    LISTEN
 ### 🔌 CLOSED（Server and client）
 
 完全没有连接状态
+
+## 参考文档
+
+1. [TCP handshake](https://developer.mozilla.org/en-US/docs/Glossary/TCP_handshake)
+2. [Transmission Control Protocol](https://en.wikipedia.org/wiki/Transmission_Control_Protocol)

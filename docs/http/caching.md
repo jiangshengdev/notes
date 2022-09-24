@@ -614,3 +614,7 @@ CDN 将通过存储主要资源并仅在服务器上发生更新时显式清除�
 
 如果 service worker 可以在服务器上发生更新时删除缓存
 API 中的内容，它也可以这样做
+
+## 参考文档
+
+1. [HTTP caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching)

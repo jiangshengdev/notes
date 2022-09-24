@@ -15,3 +15,8 @@ Web 技术包含用于文档和编码的一长串行话和缩写。术语表提�
 [TCP](tcp.md)
 : TCP 是一种重要的网络协议，它可以让两台主机连接并交换数据流。TCP
 保证数据和数据包的传输顺序与发送顺序相同
+
+## 参考文档
+
+1. [Common questions](https://developer.mozilla.org/en-US/docs/Learn/Common_questions)
+2. [MDN Web Docs Glossary: Definitions of Web-related terms](https://developer.mozilla.org/en-US/docs/Glossary)

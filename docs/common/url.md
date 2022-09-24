@@ -147,3 +147,9 @@ Skills/Infrastructure/Understanding_URLs
 - 更容易操纵
 - 为用户阐明了他们在哪里、他们在做什么、他们在 Web 上阅读或与之交互的内容
 - 一些搜索引擎可以使用这些语义来改进相关页面的分类
+
+## 参考文档
+
+1. [URI](https://developer.mozilla.org/en-US/docs/Glossary/URI)
+2. [URL](https://developer.mozilla.org/en-US/docs/Glossary/URL)
+3. [What is a URL?](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL)
