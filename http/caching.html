@@ -6,8 +6,8 @@
     <title>🗃 HTTP 缓存 | 索引</title>
     <meta name="description" content="只是学习笔记">
     <link rel="stylesheet" href="/notes/assets/style.8012f694.css">
-    <link rel="modulepreload" href="/notes/assets/app.44c88740.js">
-    <link rel="modulepreload" href="/notes/assets/http_caching.md.4b3fdd30.lean.js">
+    <link rel="modulepreload" href="/notes/assets/app.70feb1b9.js">
+    <link rel="modulepreload" href="/notes/assets/http_caching.md.880a801a.lean.js">
     
     <script id="check-dark-light">(()=>{const e=localStorage.getItem("vitepress-theme-appearance"),a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
   </head>
@@ -152,8 +152,8 @@
 <span class="line"><span style="color:#F07178;">Set-Cookie</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#C3E88D;">__Host-SID=AHNtAyt3fvJrUL5g5tnGwER; Secure; Path=/; HttpOnly</span></span>
 <span class="line"></span>
 <span class="line"></span></code></pre></div><p>这同样可用于 <code>favicon.ico</code>、<code>manifest.json</code>、<code>.well-known</code> 和 API 端点，其 URL 不能使用缓存破坏来更改</p><p>大多数 Web 内容都可以通过上述两种模式的组合来覆盖</p><h3 id="关于托管缓存的更多信息" tabindex="-1">关于托管缓存的更多信息 <a class="header-anchor" href="#关于托管缓存的更多信息" aria-hidden="true">#</a></h3><blockquote><p>More about managed caches</p></blockquote><p>使用前面章节描述的方法，子资源可以通过缓存破坏来缓存很长时间，但主要资源（通常是 HTML 文档）不能</p><p>缓存主要资源很困难，因为仅使用 HTTP 缓存规范中的标准指令，在服务器上更新内容时无法主动删除缓存内容</p><p>然而，可以通过部署托管缓存（例如 CDN 或 service worker）来实现</p><p>例如，允许通过 API 或仪表板操作清除缓存的 CDN 将通过存储主要资源并仅在服务器上发生更新时显式清除相关缓存来实现更积极的缓存策略</p><p>如果 service worker 可以在服务器上发生更新时删除缓存 API 中的内容，它也可以这样做</p><h2 id="参考文档" tabindex="-1">参考文档 <a class="header-anchor" href="#参考文档" aria-hidden="true">#</a></h2><ol><li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching" target="_blank" rel="noreferrer">HTTP caching</a></li></ol></div></div></main><!--[--><!--]--><!----><!--[--><!--]--></div></div></div></div></div><!----><!--[--><!--]--></div></div>
-    <script>__VP_HASH_MAP__ = JSON.parse("{\"common_index.md\":\"1a448032\",\"common_tcp.md\":\"0426c172\",\"common_url.md\":\"812e3343\",\"http_caching.md\":\"4b3fdd30\",\"http_index.md\":\"7b26e406\",\"http_overview.md\":\"3b4d8043\",\"index.md\":\"c921782d\"}")</script>
-    <script type="module" async src="/notes/assets/app.44c88740.js"></script>
+    <script>__VP_HASH_MAP__ = JSON.parse("{\"common_index.md\":\"7c206dfe\",\"common_tcp.md\":\"ee1f4479\",\"common_url.md\":\"7db5860e\",\"http_caching.md\":\"880a801a\",\"http_index.md\":\"c11dc9fe\",\"http_overview.md\":\"6aa06859\",\"index.md\":\"cf152ab9\"}")</script>
+    <script type="module" async src="/notes/assets/app.70feb1b9.js"></script>
     
   </body>
 </html>
