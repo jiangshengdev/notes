@@ -16,5 +16,8 @@
     "prettier": "^2.7.1",
     "vitepress": "^1.6.4",
     "vue": "^3.5.26"
+  },
+  "resolutions": {
+    "esbuild": "0.25.0"
   }
 }
